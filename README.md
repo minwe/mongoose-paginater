@@ -1,17 +1,19 @@
-# Mongoose Paginator
+# Mongoose Paginater
 
-A [Mongoose](https://github.com/LearnBoost/mongoose) paginate plugin, forked from [Paginate for mongoose](https://github.com/song940/mongoose-paginate.git) by [song940](https://github.com/song940)
+A [Mongoose](https://github.com/LearnBoost/mongoose) paginate plugin, forked from [Paginate for mongoose](https://github.com/song940/mongoose-paginate.git) by [song940](https://github.com/song940).
 
-[![NPM](https://nodei.co/npm/mongoose-paginator.png?downloads=true&stars=true)](https://nodei.co/npm/mongoose-paginator/)
+`paginater` means `paginator`.
 
 ## Installation
 
-    $ npm install mongoose-paginator
+```
+$ npm install mongoose-paginater
+```
 
 ## Example
 
 ```javascript
-require('paginate-for-mongoose');
+require('mongoose-paginater');
 
 var options = {
   perPage: 10,
@@ -21,7 +23,7 @@ var options = {
 
 var query = MyModel.find({deleted: false}).sort('name', 1);
 
-query.paginate(options, function(err, res) {
+query.pagor(options, function(err, res) {
   console.log(res); // => res = {
     //  options: options,               // paginate options
     //  results: [Document, ...],       // mongoose results
@@ -34,6 +36,8 @@ query.paginate(options, function(err, res) {
   //};
 });
 ```
+
+[![NPM](https://nodei.co/npm/mongoose-paginater.png?downloads=true&stars=true)](https://nodei.co/npm/mongoose-paginater/)
 
 ## License
 
