@@ -1,18 +1,18 @@
 /**
- * Mongoose Paginator
+ * Mongoose Paginater
  */
 
 var Query = require('mongoose').Query;
 var render = require('./libs/render');
 
 /**
- * paginator
+ * paginater
  *
  * @param options
  * @param callback
  */
 
-Query.prototype.paginator = function(options, callback) {
+Query.prototype.paginater = function(options, callback) {
     var defaults = {
         perPage: 10, // Number of items to display on each page.
         delta: 5, // Number of page numbers to display before and after the current one.
