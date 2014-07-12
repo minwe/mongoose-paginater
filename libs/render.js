@@ -23,5 +23,3 @@ module.exports = function(options){
         return render(options);
     };
 };
-
-
