@@ -1,6 +1,6 @@
 # Mongoose Paginater
 
-A [Mongoose](https://github.com/LearnBoost/mongoose) paginate plugin, forked from [Paginate for mongoose](https://github.com/song940/mongoose-paginate.git) by [song940](https://github.com/song940).
+A [Mongoose](https://github.com/LearnBoost/mongoose) paginatation plugin, forked from [Paginate for mongoose](https://github.com/song940/mongoose-paginate.git) by [song940](https://github.com/song940).
 
 `paginater` means `paginator`.
 
@@ -23,7 +23,7 @@ var options = {
 
 var query = MyModel.find({deleted: false}).sort('name', 1);
 
-query.pagor(options, function(err, res) {
+query.paginater(options, function(err, res) {
   console.log(res); // => res = {
     //  options: options,               // paginate options
     //  results: [Document, ...],       // mongoose results
