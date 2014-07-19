@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{title}}</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="/assets/i/favicon.png">
+  <link rel="stylesheet" href="/assets/css/amui.all.min.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+<div class="am-container">
+  <h1>Mongoose Paginater Render Example</h1>
+  <table class="am-table am-table-bd am-table-striped am-table-hover tester-list">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>UserName</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each pager.results}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{username}}
+        </td>
+        <td>{{email}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+
+  {{{pager.render}}}
+</div>
+</body>
+</html>

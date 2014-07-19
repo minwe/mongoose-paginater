@@ -10,9 +10,10 @@ A [Mongoose](https://github.com/LearnBoost/mongoose) paginatation plugin, forked
 $ npm install mongoose-paginater
 ```
 
-## Example
+## Usage
 
 ```javascript
+var mongoose = require('mongoose');
 require('mongoose-paginater');
 
 var options = {
@@ -25,7 +26,6 @@ var query = MyModel.find({deleted: false}).sort('name', 1);
 
 query.paginater(options, function(err, res) {
   console.log(res); // => res = {
-    //  options: options,               // paginate options
     //  results: [Document, ...],       // mongoose results
     //  current: 5,                     // current page number
     //  last: 12,                       // last page number
@@ -33,9 +33,89 @@ query.paginater(options, function(err, res) {
     //  next: 6,                        // next number or null
     //  pages: [ 2, 3, 4, 5, 6, 7, 8 ], // page numbers
     //  count: 125                      // document count
+    //  render: '<ul>...</ul>'          // rendered pagination
   //};
 });
 ```
+    
+## Pagination Render
+    
+There is a pagination template in the render, and you can set options via paginater's settings.
+    
+The defaults:
+    
+```javascript
+{
+    firstText: 'First',
+    prevText: '&laquo;',
+    nextText: '&raquo;',
+    lastText: 'Last',
+    totalText: 'Page %d of %d',
+    path: '',
+    query: {},
+    classNameSpace: '',
+    className: {
+        wrap: 'pagination',
+        active: 'active',
+        disable: 'disabled'
+    }
+}
+```
+   
+In the example folder, the render is used like this:
+    
+```javascript
+var options = {
+    perPage: 10,
+    delta  : 3,
+    page   : req.query.page,
+    classNameSpace: 'am',
+    query: {q1: 'v1', q2: 'v2'}
+};
+
+var query = User.find().sort({'id': 1});
+
+query.paginater(options, function(err, result) {
+    res.render('index', {
+        title: 'User List',
+        pager: result
+    });
+});
+```
+    
+And the rendered pagination is for [Amaze UI Pagination](http://amazeui.org/css/pagination):
+    
+```html
+<ul class="am-pagination">
+  <li><span>Page 1 of 11</span></li>
+  <li class="am-disabled"><a href="?q1=v1&amp;q2=v2&amp;page=1">« Prev</a></li>
+  <li class="am-active"><a href="?q1=v1&amp;q2=v2&amp;page=1">1</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=2">2</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=3">3</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=4">4</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=5">5</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=6">6</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=7">7</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=2">Next »</a></li>
+  <li><a href="?q1=v1&amp;q2=v2&amp;page=11">Last</a></li>
+</ul>
+```
+
+- [Bootstrap](http://getbootstrap.com/components/#pagination): just use it with default options.
+- [UIKit](http://getuikit.com/docs/pagination.html): set `classNameSpace: 'uk'`
+
+You can also use rendered HTML to other frameworks, just set classes you want.
+
+## Run Example
+
+1. Clone this project.
+2. Install packages and run it.
+    ```
+    cd example
+    npm install
+    npm start
+    ```
+3. Vist `localhost:3007`.
 
 [![NPM](https://nodei.co/npm/mongoose-paginater.png?downloads=true&stars=true)](https://nodei.co/npm/mongoose-paginater/)
 

@@ -1,28 +1,29 @@
 {
-    "name": "mongoose-paginater",
-    "version": "0.0.1",
-    "description": "A pagination plugin for Mongoose.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Minwe/mongoose-paginater.git"
-    },
-    "keywords": [
-        "mongoose",
-        "mongodb",
-        "paginator",
-        "pagination"
-    ],
-    "author": "minwe",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Minwe/mongoose-paginater/issues"
-    },
-    "homepage": "https://github.com/Minwe/mongoose-paginater",
-    "dependencies": {
-        "mongoose": "*"
-    }
+  "name": "mongoose-paginater",
+  "version": "0.0.4",
+  "description": "A pagination plugin for Mongoose.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Minwe/mongoose-paginater.git"
+  },
+  "keywords": [
+    "mongoose",
+    "mongodb",
+    "paginator",
+    "pagination"
+  ],
+  "author": "minwe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Minwe/mongoose-paginater/issues"
+  },
+  "homepage": "https://github.com/Minwe/mongoose-paginater",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "mongoose": "*"
+  }
 }

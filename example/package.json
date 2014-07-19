@@ -1,0 +1,21 @@
+{
+  "name": "mongoose-paginater-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "errorhandler": "^1.1.1",
+    "express": "4.x",
+    "hbs": "~2.7.0",
+    "less-middleware": "1.0.x",
+    "lodash": "^2.4.1",
+    "mongoose": "^3.8.13",
+    "mongoose-paginater": "latest",
+    "morgan": "~1.0.0"
+  }
+}
