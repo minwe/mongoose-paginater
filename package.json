@@ -1,6 +1,6 @@
 {
   "name": "mongoose-paginater",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A pagination plugin for Mongoose.",
   "main": "index.js",
   "scripts": {

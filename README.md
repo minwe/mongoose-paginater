@@ -111,7 +111,7 @@ You can also use rendered HTML to other frameworks, just set classes you want.
 
 1. Clone this project;
 2. Install packages and run it;
-3. Vist `localhost:3007`.
+3. Visit `localhost:3007`.
 
 ```
 git clone https://github.com/Minwe/mongoose-paginater.git

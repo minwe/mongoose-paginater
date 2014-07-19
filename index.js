@@ -2,18 +2,17 @@ var _ = require('lodash');
 var Query = require('mongoose').Query;
 var render = require('./lib/render');
 
-/**
- * paginater
- *
- * @param options
- * @param callback
- */
+
+// Mongoose Paginater
+//
+// @param options
+// @param callback
 
 Query.prototype.paginater = function(options, callback) {
     var defaults = {
-        perPage: 10, // Number of items to display on each page.
-        delta: 5, // Number of page numbers to display before and after the current one.
-        page: 1  // Initial page number.
+        perPage: 10, // Number of each page.
+        delta: 5,    // Number of page numbers to display before and after the current one.
+        page: 1      // Initial page number.
     };
 
     options = _.merge(defaults, options);
