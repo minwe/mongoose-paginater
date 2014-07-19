@@ -51,8 +51,9 @@ The defaults:
     nextText: '&raquo;',
     lastText: 'Last',
     totalText: 'Page %d of %d',
-    path: '',
-    query: {},
+    path: '',  // path/to
+    query: {}, // the page query is `page=n`, you can add other queries `{query1: 'val', q2: 'v2' }`
+               // the pagination href will be like: `path/to?query1=val&q2=v2&page=n`
     classNameSpace: '',
     className: {
         wrap: 'pagination',
@@ -83,21 +84,21 @@ query.paginater(options, function(err, result) {
 });
 ```
     
-And the rendered pagination is for [Amaze UI Pagination](http://amazeui.org/css/pagination):
+The HTML is for [Amaze UI Pagination](http://amazeui.org/css/pagination):
     
 ```html
 <ul class="am-pagination">
   <li><span>Page 1 of 11</span></li>
-  <li class="am-disabled"><a href="?q1=v1&amp;q2=v2&amp;page=1">« Prev</a></li>
-  <li class="am-active"><a href="?q1=v1&amp;q2=v2&amp;page=1">1</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=2">2</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=3">3</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=4">4</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=5">5</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=6">6</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=7">7</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=2">Next »</a></li>
-  <li><a href="?q1=v1&amp;q2=v2&amp;page=11">Last</a></li>
+  <li class="am-disabled"><a href="?q1=v1&q2=v2&page=1">« Prev</a></li>
+  <li class="am-active"><a href="?q1=v1&q2=v2&page=1">1</a></li>
+  <li><a href="?q1=v1&q2=v2&page=2">2</a></li>
+  <li><a href="?q1=v1&q2=v2&page=3">3</a></li>
+  <li><a href="?q1=v1&q2=v2&page=4">4</a></li>
+  <li><a href="?q1=v1&q2=v2&page=5">5</a></li>
+  <li><a href="?q1=v1&q2=v2&page=6">6</a></li>
+  <li><a href="?q1=v1&q2=v2&page=7">7</a></li>
+  <li><a href="?q1=v1&q2=v2&page=2">Next »</a></li>
+  <li><a href="?q1=v1&q2=v2&page=11">Last</a></li>
 </ul>
 ```
 
