@@ -108,14 +108,18 @@ You can also use rendered HTML to other frameworks, just set classes you want.
 
 ## Run Example
 
-1. Clone this project.
-2. Install packages and run it.
-    ```
-    cd example
-    npm install
-    npm start
-    ```
+1. Clone this project;
+2. Install packages and run it;
 3. Vist `localhost:3007`.
+
+```
+git clone https://github.com/Minwe/mongoose-paginater.git
+cd mongoose-paginater/example
+npm install
+npm start
+```
+
+
 
 [![NPM](https://nodei.co/npm/mongoose-paginater.png?downloads=true&stars=true)](https://nodei.co/npm/mongoose-paginater/)
 
