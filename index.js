@@ -15,7 +15,7 @@ Query.prototype.paginater = function(options, callback) {
         page: 1      // Initial page number.
     };
 
-    options = _.merge(defaults, options);
+    options = _.merge({}, defaults, options);
 
     var delta = options.delta;
     var current = parseInt(options.page, 10) || 1;
