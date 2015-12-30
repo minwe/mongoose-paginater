@@ -28,7 +28,7 @@ Query.prototype.paginater = function(options, callback) {
         // req page should lte total pages
         current = Math.min(current, pageCount);
 
-        var _skip = (current - 1) * options.perPage;
+        var _skip = Math.max(0,(current - 1) * options.perPage);
         query.skip(_skip).limit(options.perPage).exec(function(err, results) {
             if (err) {
                 callback(err, {});
