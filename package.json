@@ -1,6 +1,6 @@
 {
   "name": "mongoose-paginater",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "A pagination plugin for Mongoose.",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/Minwe/mongoose-paginater",
   "dependencies": {
-    "lodash": "^2.4.1",
-    "mongoose": "*"
+    "mongoose": "*",
+    "object-assign": "^4.1.0",
+    "querystring": "^0.2.0"
   }
 }

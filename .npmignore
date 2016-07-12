@@ -31,3 +31,5 @@ node_modules
 
 .idea
 .gitignore
+example
+test

@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('lodash');
+var assign = require('object-assign');
 var Query = require('mongoose').Query;
 var render = require('./lib/render');
 
@@ -16,7 +16,7 @@ Query.prototype.paginater = function(options, callback) {
     page: 1      // Initial page number.
   };
 
-  options = _.merge({}, defaults, options);
+  options = assign({}, defaults, options);
 
   var delta = options.delta;
   var current = parseInt(options.page, 10) || 1;
@@ -75,7 +75,7 @@ Query.prototype.paginater = function(options, callback) {
         'count': count
       };
 
-      pager.render = render(_.merge({}, pager, options));
+      pager.render = render(assign({}, pager, options));
 
       callback(err, pager);
     });
